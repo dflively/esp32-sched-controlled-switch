@@ -1,0 +1,3 @@
+[submodule "esp32-components"]
+	path = esp32-components
+	url = https://github.com/dflively/esp32-components

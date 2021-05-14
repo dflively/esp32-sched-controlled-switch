@@ -1,0 +1,19 @@
+menu "App Configuration"
+
+    config CONTROL_PIN
+        int "GPIO pin connected to IOT Relay Control"
+		default 33
+
+    config TZ
+        string "Timezone, e.g. EST5EDT"
+		default "EST5EDT"
+	
+	config ON_TIME
+	    int "Time of day to turn on relay (HHMM)"
+	    default 600
+	    
+	config OFF_TIME
+	    int "Time of day to turn off relay (HHMM)"
+	    default 1800
+	
+endmenu
