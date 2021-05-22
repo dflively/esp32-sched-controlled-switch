@@ -6,6 +6,7 @@
 #include <driver/gpio.h>
 
 #include <wifi_prov_connect.h>
+#include <loki.h>
 
 static const char *TAG = "sched_controlled_switch";
 
@@ -26,6 +27,8 @@ void app_main(void) {
 
 	// Connect to WiFi, provisioning connection if necessary
 	ESP_ERROR_CHECK(wifi_prov_connect());
+
+	ESP_ERROR_CHECK(loki_client_init("http://192.168.1.32:33100/loki/api/v1/push"));
 
 	// Set system timezone
 	setenv("TZ", CONFIG_TZ, 1);

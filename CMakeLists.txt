@@ -6,7 +6,8 @@ cmake_minimum_required(VERSION 3.5)
 
 set(EXTRA_COMPONENT_DIRS
 	$ENV{IDF_PATH}/examples/common_components/qrcode 
-	esp32-components/wifi_prov_connect)
+	esp32-components/wifi_prov_connect
+	esp32-components/loki)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(esp32-sched-controlled-switch)
